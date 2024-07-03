@@ -1,0 +1,80 @@
+# React & Router both are library of JavaScript
+
+#create react app
+ npx create-react-app .
+
+#Install react router dom for routing the components so we don't have to reload whole page
+ npm install react-router-dom@6
+
+# 'a' tag we will not use in place of 'a' tag we will use 'link' & 'navlink' because a tag will refresh the
+  all content present in page 
+  <a href="/">Home</a>    ==> in html we use like this a tag
+  <Link to = '/'>Home</Link> ==> in react router we use like this Link tag
+  <NavLink to="/products" className='link'>Products</NavLink>
+
+# 'a' tag we will use to send to different website like for example 
+   if we want to send to our facebook page we will use this 'a' tag in react
+
+# Hook 'useNavigate' is used for moving contents in diffrent pages like from product to home etc.
+
+# "Navigate" is used for navigating in route level with conditon like "/admin" this is the the route we can give
+    <Route path="/admin" element={<Navigate to = "/products" />}></Route>   
+    on /admin it will go to /products
+# useParams
+ It is used to access the data from database on route level itself
+
+#useSearchParams
+ similar to useParams we have useSearchParams which is used for accessing all types of other parameters 
+ like if any question mark is there or any search query is there
+
+
+#Structure of our Project :-
+
+    Create Folder "Components" & "Pages" or in pages we can create more folders like "Contact" and so on we 
+    also create a route folder and file to keep all routes
+
+    In route Folder :-
+        AllRoutes.js
+
+    In Component Folder :-
+        Header.Js
+        Footer.Js
+
+    In Pages Folder :-
+        Admin.Js
+        Home.Js
+        ProductList.Js
+        ProductDetail.Js
+        PageNotFound.Js
+        Contact Folder :-
+            Contact.Js
+            ContactIn.Js
+            ContactEu.Js
+            ContactUs.Js
+
+    In each folder we can create a index.js file and export all components or pages 
+    from that and import everything in one line like this
+
+    in index.js
+    export { Header } from "./Header"
+    export { Footer } from "./Footer"
+
+    App.js
+    import { Header, Footer } from "./components/index";
+
+    In route folder we can have all routes and import it in App.js
+
+#In every page not on components add main in jsx
+
+# We things used from react-router-dom
+    Routes, 
+    Route, 
+    Navigate
+    useSearchParams, 
+    useLocation
+    useParams
+    useNavigate, 
+    Outlet
+    Link, 
+    NavLink
+
